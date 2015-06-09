@@ -70,10 +70,10 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:Array<Dictionary<String, String>>) -> Array<String> {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
-    var drinkArray : Array<String>
+    var drinkArray:[String] = []
     
     for char in characters {
-        drinkArray = drinkArray + [char["favorite drink"]]
+        drinkArray.append(char["favorite drink"]!)
     }
     
     // WORK HERE
@@ -95,12 +95,15 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 func stringsFromArray(groceries:Array<String>) -> String {
-    var s : String
-    for item in groceries {
-        s += item + ";"
+    var str : String = ""
+    for var i = 0; i < groceries.count; i++ {
+        str += groceries[i]
+        if (i < groceries.count - 1) {
+            str += ";"
+        }
     }
     // tried to remove last ";" with s[:-1], somthing like that is available in Python
-    return s
+    return str
 }
 
 // WORK HERE - make your function and pass `strings` in
