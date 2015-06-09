@@ -37,14 +37,18 @@
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     /* WORK HERE */
     
-    NSInteger lowest = [arrayOfNumbers[0] integerValue];
+//    NSInteger lowest = [arrayOfNumbers[0] integerValue];
+//    
+//    for (NSNumber *i in arrayOfNumbers) {
+//        if ([i integerValue] < lowest) {
+//            lowest = [i integerValue];
+//        }
+//    }
+//    return lowest;
     
-    for (NSNumber *i in arrayOfNumbers) {
-        if ([i integerValue] < lowest) {
-            lowest = [i integerValue];
-        }
-    }
-    return lowest;
+    // found this on git hub, slick but what is KeyPath?
+    NSNumber *min=[arrayOfNumbers valueForKeyPath:@"@min.doubleValue"];
+    return [min integerValue];
     
     // Can't get this to work
     // NSMutableArray *newArray = [arrayOfNumbers mutableCopy];
