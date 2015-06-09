@@ -37,6 +37,7 @@
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     /* WORK HERE */
     
+//    This works
 //    NSInteger lowest = [arrayOfNumbers[0] integerValue];
 //    
 //    for (NSNumber *i in arrayOfNumbers) {
