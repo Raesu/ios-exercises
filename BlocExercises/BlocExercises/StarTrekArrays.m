@@ -32,6 +32,7 @@
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
+    // Also very new to the predicate object
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     NSArray *result = [characterArray filteredArrayUsingPredicate:pred];
     return result.count ? YES: NO;
