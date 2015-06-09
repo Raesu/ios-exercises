@@ -16,7 +16,7 @@
     // This isn't passing the test. May try later. Does it want me to pass
     // the memory address or something? I have tried variations of copy, strong,
     // can't imagine it is weak. Let discuss on our next call.
-    self.arrayToRemember = [NSMutableArray arrayWithArray:arrayToRemember];
+    self.arrayToRemember = arrayToRemember;
 }
 
 - (void) copyThisArrayForLater:(NSMutableArray *)arrayToCopy {
